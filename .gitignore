@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.env
+.venv
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Data files
+data/raw_videos/*
+data/cropped_videos/*
+data/pose_keypoints/*
+
+# Output files
+outputs/overlay_videos/*
+outputs/plots/*
+reports/*
+
+# Keep folders
+!data/raw_videos/.gitkeep
+!data/cropped_videos/.gitkeep
+!data/pose_keypoints/.gitkeep
+!outputs/overlay_videos/.gitkeep
+!outputs/plots/.gitkeep
+!reports/.gitkeep
+
+# Large files
+*.mp4
+*.mov
+*.avi
+*.mkv
