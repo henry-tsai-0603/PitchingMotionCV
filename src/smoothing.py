@@ -95,6 +95,7 @@ def smooth_pose_keypoints(
     output_csv_path: str,
     output_plot_dir: str,
     fps: float,
+    pitch_id: str = "sample_pitch",
     throwing_side: str = "right",
     window_length: int = 11,
     polyorder: int = 2,
@@ -141,7 +142,10 @@ def smooth_pose_keypoints(
     smoothed_df.to_csv(output_csv_path, index=False)
 
     # Plot trajectory
-    trajectory_plot_path = os.path.join(output_plot_dir, f"{throwing_side}_wrist_trajectory.png")
+    trajectory_plot_path = os.path.join(
+        output_plot_dir,
+        f"{pitch_id}_{throwing_side}_wrist_trajectory.png"
+    )
     plot_wrist_trajectory(
         smoothed_df,
         wrist_x,
@@ -151,7 +155,10 @@ def smooth_pose_keypoints(
     )
 
     # Plot speed curve
-    speed_plot_path = os.path.join(output_plot_dir, f"{throwing_side}_wrist_speed.png")
+    speed_plot_path = os.path.join(
+        output_plot_dir,
+        f"{pitch_id}_{throwing_side}_wrist_speed.png"
+    )
     plot_speed_curve(
         smoothed_df,
         time_col="time_sec",
@@ -178,6 +185,7 @@ if __name__ == "__main__":
     input_csv = "data/pose_keypoints/sample_pitch_keypoints.csv"
     output_csv = "data/pose_keypoints/sample_pitch_keypoints_smoothed.csv"
     output_plot_dir = "outputs/plots"
+    pitch_id = "sample_pitch"
 
     # 你先假設這支影片是右投；如果之後是左投，再改成 "left"
     throwing_side = "right"
@@ -190,6 +198,7 @@ if __name__ == "__main__":
         input_csv_path=input_csv,
         output_csv_path=output_csv,
         output_plot_dir=output_plot_dir,
+        pitch_id=pitch_id,
         fps=fps,
         throwing_side=throwing_side,
         window_length=11,
