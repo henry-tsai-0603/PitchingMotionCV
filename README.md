@@ -35,6 +35,7 @@ Input pitching video
 → kinematic feature extraction
 → pitch velocity proxy estimation
 → visualization and report generation
+```
 
 ## Current MVP Result
 
