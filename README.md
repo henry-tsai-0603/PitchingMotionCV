@@ -53,3 +53,18 @@ Using a sample right-handed pitching video, the pipeline produced the following 
 | Pitch intensity score | 92.42 / 100 |
 
 The pitch intensity score is a pose-based motion proxy and should not be interpreted as official pitch velocity in miles per hour.
+
+
+## Example Visual Outputs
+
+### Estimated Release Frame
+
+![Estimated Release Frame](docs/images/release_frame_snapshot.png)
+
+### Wrist Speed Curve and Estimated Release
+
+![Wrist Speed Release Plot](docs/images/wrist_speed_release.png)
+
+### Pitch Intensity Feature Summary
+
+![Pitch Intensity Features](docs/images/pitch_intensity_features.png)
