@@ -96,6 +96,7 @@ def run_pipeline(
         input_csv_path=raw_keypoints_csv,
         output_csv_path=smoothed_keypoints_csv,
         output_plot_dir="outputs/plots",
+        pitch_id=pitch_id,
         fps=fps,
         throwing_side=throwing_side,
         window_length=11,
