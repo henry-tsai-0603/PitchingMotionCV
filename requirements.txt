@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pandas
+matplotlib
+scipy
+mediapipe==0.10.14
+jupyter
+tqdm
