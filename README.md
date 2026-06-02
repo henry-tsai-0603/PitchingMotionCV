@@ -35,3 +35,21 @@ Input pitching video
 → kinematic feature extraction
 → pitch velocity proxy estimation
 → visualization and report generation
+
+## Current MVP Result
+
+Using a sample right-handed pitching video, the pipeline produced the following result:
+
+| Metric | Value |
+|---|---:|
+| Estimated release frame | 450 |
+| Estimated release time | 7.539 sec |
+| Release confidence | Medium |
+| Wrist speed peak | 3.893 |
+| Wrist acceleration peak | 80.000 |
+| Elbow extension speed peak | 1200.000 |
+| 2D arm slot proxy | 113.60 degrees |
+| Trunk tilt proxy | 6.85 degrees |
+| Pitch intensity score | 92.42 / 100 |
+
+The pitch intensity score is a pose-based motion proxy and should not be interpreted as official pitch velocity in miles per hour.
